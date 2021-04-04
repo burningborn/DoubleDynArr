@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 using namespace std;
 
 //void FillRand(int** arr)
@@ -40,7 +40,7 @@ void rows(int** arr, int m, int n, int value)
 	cout << " Удалить  последнюю  строку: - 4 \n";
 	cout << " Удалить    первую   строку: - 5 \n";
 	cout << " Удалить  строку по индексу: - 6 \n";
-	cout << " Выход  предидущее  в  меню: - 0 \n";
+	cout << " Выход  предыдущее  в  меню: - 0 \n";
 	cin >> key1;
 	system("cls");
 	switch (key1)
@@ -90,7 +90,7 @@ void cols(int** arr, int m, int n, int value)
 		cout << " Удалить  последнюю  колонну: - 4 \n";
 		cout << " Удалить    первую   колонну: - 5 \n";
 		cout << " Удалить  колонну по индексу: - 6 \n";
-		cout << " Выход   предидущее  в  меню: - 0 \n";
+		cout << " Выход   предыдущее  в  меню: - 0 \n";
 		cin >> key2;
 		system("cls");
 		switch (key2)
@@ -135,17 +135,18 @@ void main()
 	setlocale(LC_ALL, "Rus");
 	int value = 0; 
 	int key = 0;
-	int m = 5; //Количество строк
-	int n = 5; //Количество столбцов
-	cout << " Задаём размер массива для работы. \n"; 
-	/*cout << " Введите количество строк: - "; cin >> m;
-	cout << "\n Введите количество элементов строки: "; cin >> n;*/
+	int m; //Количество строк
+	int n; //Количество столбцов
 
 
 
 	do
 	{
+	cout << " Задаём размер массива для работы. \n"; 
+	cout << " Введите    количество         строк: - "; cin >> m;
+	cout << "\n Введите количество элементов строки: - "; cin >> n;
 	int** arr = new int* [m] {};    //1) Создаём массив указателей:
+
 	Allocate(arr, m, n);
 	FillRand(arr, m, n);
 	cout << " Начальный массив \n"; Print(arr, m, n);
